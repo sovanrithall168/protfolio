@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio — About · Projects · Skills · Resume</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* small visual helpers */
+    .nav-active { color: white; background: linear-gradient(90deg,#06b6d4, #7c3aed); padding: .35rem .6rem; border-radius: .5rem; }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-200 antialiased leading-relaxed">
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-gray-800/60 backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center gap-4">
+          <a href="#" class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-teal-400 to-violet-600 flex items-center justify-center font-bold text-gray-900">RS</div>
+            <div class="hidden sm:block">
+              <div class="text-white font-semibold">Rith Sovan</div>
+              <div class="text-xs text-gray-300">Software Engineer — POS & Web</div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Desktop nav -->
+        <nav class="hidden md:flex gap-6 text-gray-300 items-center">
+          <a href="#about" class="hover:text-white">About</a>
+          <a href="#projects" class="hover:text-white">Projects</a>
+          <a href="#skills" class="hover:text-white">Skills</a>
+          <a href="#resume" class="hover:text-white">Resume</a>
+          <a href="#contact" class="ml-4 inline-block px-3 py-1.5 rounded-md bg-gradient-to-r from-teal-400 to-violet-600 text-gray-900 font-medium">Contact</a>
+        </nav>
+
+        <!-- Mobile hamburger -->
+        <div class="md:hidden">
+          <button id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" class="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-300">
+            <svg id="iconOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+            </svg>
+            <svg id="iconClose" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu (collapsible) -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-gray-700/40">
+      <div class="px-4 pt-4 pb-6 space-y-3">
+        <a href="#about" class="block px-3 py-2 rounded-md text-gray-200 hover:text-white">About</a>
+        <a href="#projects" class="block px-3 py-2 rounded-md text-gray-200 hover:text-white">Projects</a>
+        <a href="#skills" class="block px-3 py-2 rounded-md text-gray-200 hover:text-white">Skills</a>
+        <a href="#resume" class="block px-3 py-2 rounded-md text-gray-200 hover:text-white">Resume</a>
+        <a href="#contact" class="block px-3 py-2 rounded-md text-gray-900 bg-gradient-to-r from-teal-400 to-violet-600 text-center font-medium">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- HERO / ABOUT -->
+    <section id="about" class="py-8 scroll-mt-20">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h1 class="text-4xl sm:text-5xl font-extrabold text-white">Hi — I’m Rith Sovan</h1>
+          <p class="mt-4 text-gray-300 max-w-xl">I build reliable point-of-sale and management systems for businesses. I enjoy making clean UIs with Flutter and scalable APIs with Laravel & Spring Boot.</p>
+
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#projects" class="inline-flex items-center px-4 py-2 rounded-md bg-white text-gray-900 font-medium">See projects</a>
+            <a href="#resume" class="inline-flex items-center px-4 py-2 rounded-md border border-gray-700">Download resume</a>
+          </div>
+        </div>
+
+        <div class="flex justify-center md:justify-end">
+          <div class="w-64 h-64 rounded-2xl bg-gradient-to-br from-gray-700/40 to-gray-800/40 flex items-center justify-center">
+            <!-- placeholder avatar -->
+            <div class="w-40 h-40 rounded-full bg-gradient-to-r from-teal-400 to-violet-600 flex items-center justify-center text-3xl font-bold text-gray-900">RS</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="py-12 scroll-mt-20">
+      <h2 class="text-2xl font-semibold text-white">Projects</h2>
+      <p class="text-gray-400 mt-2">Selected work — web & mobile.</p>
+
+      <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project card -->
+        <article class="p-4 bg-gray-800 rounded-xl border border-gray-700/40">
+          <div class="h-36 rounded-md bg-gradient-to-tr from-teal-500 to-violet-600 flex items-end p-3 text-white font-semibold">Cloud POS System</div>
+          <div class="mt-3 text-gray-300 text-sm">A multi-screen point-of-sale built with Flutter web + mobile, featuring GetX state management and thermal printer support.</div>
+          <div class="mt-3 text-xs text-gray-400">Flutter • Laravel • MySQL • GetX</div>
+          <div class="mt-4 flex gap-2">
+            <a class="px-3 py-1 rounded-md bg-gray-700/60 text-sm">Demo</a>
+            <a class="px-3 py-1 rounded-md border border-gray-700/30 text-sm">Source</a>
+          </div>
+        </article>
+
+        <article class="p-4 bg-gray-800 rounded-xl border border-gray-700/40">
+          <div class="h-36 rounded-md bg-gradient-to-tr from-indigo-500 to-pink-500 flex items-end p-3 text-white font-semibold">Loan Management API</div>
+          <div class="mt-3 text-gray-300 text-sm">RESTful microservices for loan lifecycle, with role-based access and analytics dashboards.</div>
+          <div class="mt-3 text-xs text-gray-400">Laravel • Spring Boot • MySQL • Jenkins</div>
+          <div class="mt-4 flex gap-2">
+            <a class="px-3 py-1 rounded-md bg-gray-700/60 text-sm">Docs</a>
+            <a class="px-3 py-1 rounded-md border border-gray-700/30 text-sm">Repo</a>
+          </div>
+        </article>
+
+        <article class="p-4 bg-gray-800 rounded-xl border border-gray-700/40">
+          <div class="h-36 rounded-md bg-gradient-to-tr from-emerald-400 to-sky-500 flex items-end p-3 text-white font-semibold">Inventory Dashboard</div>
+          <div class="mt-3 text-gray-300 text-sm">Real-time inventory & reporting system with barcode scanning integration.</div>
+          <div class="mt-3 text-xs text-gray-400">Flutter • Node.js • PostgreSQL</div>
+          <div class="mt-4 flex gap-2">
+            <a class="px-3 py-1 rounded-md bg-gray-700/60 text-sm">Live</a>
+            <a class="px-3 py-1 rounded-md border border-gray-700/30 text-sm">Case Study</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="py-12 scroll-mt-20">
+      <h2 class="text-2xl font-semibold text-white">Skills</h2>
+      <p class="text-gray-400 mt-2">Tools and technologies I use often.</p>
+
+      <div class="mt-6 grid sm:grid-cols-2 gap-6">
+        <div class="p-4 bg-gray-800 rounded-xl border border-gray-700/40">
+          <h3 class="font-semibold text-white">Languages & Frameworks</h3>
+          <ul class="mt-3 text-gray-300 space-y-2 text-sm">
+            <li>• Dart / Flutter</li>
+            <li>• PHP / Laravel</li>
+            <li>• Java / Spring Boot</li>
+            <li>• SQL (MySQL, PostgreSQL)</li>
+          </ul>
+        </div>
+
+        <div class="p-4 bg-gray-800 rounded-xl border border-gray-700/40">
+          <h3 class="font-semibold text-white">DevOps & Tools</h3>
+          <ul class="mt-3 text-gray-300 space-y-2 text-sm">
+            <li>• Docker • Jenkins</li>
+            <li>• Nginx • Git</li>
+            <li>• VS Code • Android Studio</li>
+            <li>• Thermal printer integrations</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUME -->
+    <section id="resume" class="py-12 scroll-mt-20">
+      <h2 class="text-2xl font-semibold text-white">Resume</h2>
+      <p class="text-gray-400 mt-2">Download my resume or view highlights below.</p>
+
+      <div class="mt-6 grid md:grid-cols-3 gap-6">
+        <div class="md:col-span-2 p-4 bg-gray-800 rounded-xl border border-gray-700/40">
+          <h3 class="font-semibold text-white">Experience</h3>
+          <ol class="mt-3 text-gray-300 text-sm space-y-3">
+            <li>
+              <div class="font-medium text-white">Team Lead — POS Development</div>
+              <div class="text-xs text-gray-400">LTC Software · 2022 — Present</div>
+              <div class="mt-1">Led a 3-person front-end team building cross-platform POS with Flutter. Implemented microservices and CI pipelines.</div>
+            </li>
+
+            <li>
+              <div class="font-medium text-white">Full-stack Developer</div>
+              <div class="text-xs text-gray-400">Previous Company · 2018 — 2022</div>
+              <div class="mt-1">Built REST APIs, maintained MySQL databases, and integrated payment & printer hardware.</div>
+            </li>
+          </ol>
+        </div>
+
+        <div class="p-4 bg-gray-800 rounded-xl border border-gray-700/40 flex flex-col items-start gap-3">
+          <a href="#" class="w-full text-center px-4 py-2 rounded-md bg-gradient-to-r from-teal-400 to-violet-600 text-gray-900 font-medium">Download PDF</a>
+          <a href="#contact" class="w-full text-center px-4 py-2 rounded-md border border-gray-700/40">Contact</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-12 scroll-mt-20">
+      <h2 class="text-2xl font-semibold text-white">Contact</h2>
+      <p class="text-gray-400 mt-2">Let’s build something together.</p>
+
+      <form class="mt-6 grid sm:grid-cols-2 gap-4">
+        <input class="p-3 rounded-md bg-gray-800 border border-gray-700/40 text-gray-200" placeholder="Your name" />
+        <input class="p-3 rounded-md bg-gray-800 border border-gray-700/40 text-gray-200" placeholder="Email" />
+        <textarea class="p-3 rounded-md bg-gray-800 border border-gray-700/40 text-gray-200 col-span-2" rows="4" placeholder="Message"></textarea>
+        <button class="col-span-2 px-4 py-2 rounded-md bg-gradient-to-r from-teal-400 to-violet-600 text-gray-900 font-medium">Send message</button>
+      </form>
+    </section>
+
+    <footer class="mt-16 text-center text-gray-500 text-sm pb-12">© <span id="year"></span> Rith Sovan — Built with ❤️ and TailwindCSS</footer>
+  </main>
+
+  <script>
+    // navbar mobile toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const iconOpen = document.getElementById('iconOpen');
+    const iconClose = document.getElementById('iconClose');
+
+    menuBtn.addEventListener('click', () => {
+      const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+      menuBtn.setAttribute('aria-expanded', String(!expanded));
+      mobileMenu.classList.toggle('hidden');
+      iconOpen.classList.toggle('hidden');
+      iconClose.classList.toggle('hidden');
+    });
+
+    // auto-fill year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // highlight active nav link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('nav a, #mobileMenu a');
+
+    function setActive() {
+      let index = sections.length;
+      while(--index && window.scrollY + 120 < sections[index].offsetTop) {}
+      navLinks.forEach(link => link.classList.remove('nav-active'));
+      const id = sections[index].id;
+      document.querySelectorAll(`a[href="#${id}"]`).forEach(a => a.classList.add('nav-active'));
+    }
+    setActive();
+    window.addEventListener('scroll', setActive);
+  </script>
+</body>
+</html>
